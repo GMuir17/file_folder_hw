@@ -1,6 +1,9 @@
+import db.DBFolder;
 import db.DBHelper;
 import models.File;
 import models.Folder;
+
+import java.util.List;
 
 public class Runner {
 
@@ -29,6 +32,10 @@ public class Runner {
         DBHelper.update(file3);
 
         DBHelper.delete(file4);
+
+        //OneToMany test
+        List<File> folder1Files = DBFolder.getFilesInFolder(folder1);
+        List<File> folder2Files = DBFolder.getFilesInFolder(folder2);
 
     }
 
