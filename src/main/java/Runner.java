@@ -21,6 +21,14 @@ public class Runner {
         File file3 = new File("caraoke", ".txt", 1200, folder2);
         DBHelper.save(file3);
 
+        File file4 = new File("toBeDeleted", ".jpeg", 10000, folder2);
+        DBHelper.save(file4);
+
+        //CRUD tests
+        file3.setName("karaoke");
+        DBHelper.update(file3);
+
+        DBHelper.delete(file4);
 
     }
 
