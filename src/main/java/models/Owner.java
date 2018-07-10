@@ -48,7 +48,7 @@ public class Owner {
         this.username = username;
     }
 
-    @OneToMany
+    @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
     public List<Folder> getFolders() {
         return folders;
     }

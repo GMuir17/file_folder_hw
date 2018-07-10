@@ -39,7 +39,7 @@ public class Folder {
         this.title = title;
     }
 
-    @OneToMany
+    @OneToMany(mappedBy = "folder", fetch = FetchType.EAGER)
     public List<File> getFiles() {
         return files;
     }

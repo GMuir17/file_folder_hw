@@ -1,5 +1,6 @@
 import db.DBFolder;
 import db.DBHelper;
+import db.DBOwner;
 import models.File;
 import models.Folder;
 import models.Owner;
@@ -42,6 +43,7 @@ public class Runner {
         List<File> folder1Files = DBFolder.getFilesInFolder(folder1);
         List<File> folder2Files = DBFolder.getFilesInFolder(folder2);
 
+        List<Folder> ownerFolders = DBOwner.getFoldersOfOwner(owner);
     }
 
 }
