@@ -3,6 +3,8 @@ package models;
 import javax.persistence.*;
 import java.util.List;
 
+@Entity
+@Table(name = "owners")
 public class Owner {
 
     private int id;
